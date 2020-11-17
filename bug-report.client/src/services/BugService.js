@@ -28,5 +28,14 @@ class BugService {
       logger.error(err)
     }
   }
+
+  async editBug(bugId, bugData) {
+    try {
+      await api.put('/api/bugs/' + bugId, bugData)
+      this.getBugs()
+    } catch (err) {
+      logger.error(err)
+    }
+  }
 }
 export const bugService = new BugService()

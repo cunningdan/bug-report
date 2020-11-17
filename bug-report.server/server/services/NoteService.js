@@ -4,7 +4,7 @@ import { BadRequest } from '../utils/Errors'
 
 class NoteService {
   async getNotes(id) {
-    const data = await dbContext.Notes.find({ bugId: id }).populate('bugId')
+    const data = await dbContext.Notes.find({ bugId: id }).populate('bugId').populate('profile')
     return data
   }
   async postNote(body) {

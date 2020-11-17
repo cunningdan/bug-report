@@ -1,13 +1,13 @@
 <template>
-  <div class="activeBug col">
+  <div class="activeBug col bg-dark text-primary">
     <h3>{{ activeBug.title }}</h3>
     <div class="row">
       <note-component v-for="note in notes" :key="note" :note-prop="note" />
     </div>
     <form @submit.prevent="postNote">
       <input type="text" v-model="state.newNote.content">
-      <button type="submit">
-        Post
+      <button class="btn btn-warning" type="submit">
+        Post Comment
       </button>
     </form>
   </div>
@@ -47,5 +47,8 @@ export default {
 
 <style la
     NoteComponentng="scss" scoped>
+  .activeBug{
+    text-shadow: 2px 2px 8px;
+  }
 
 </style>

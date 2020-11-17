@@ -1,6 +1,7 @@
 <template>
   <div class="noteComponent col text-center">
-    <p>{{ noteProp.content }}</p>
+    <h5>{{ noteProp.content }}</h5>
+    <p>Posted by: {{ noteProp.profile.name }}</p>
   </div>
 </template>
 

@@ -1,9 +1,11 @@
 <template>
-  <div class="home container-fluid">
-    <h1>Bugs</h1>
+  <div class="home container-fluid bg-dark text-primary">
+    <h1 class="text-primary">
+      Bugs
+    </h1>
     <form @submit.prevent="postBug">
-      <input type="text" v-model="state.newBug.title"> <br>
-      <input type="text" v-model="state.newBug.description">
+      <input type="text" v-model="state.newBug.title" placeholder="Title"> <br>
+      <input type="text" v-model="state.newBug.description" placeholder="Description"> <br>
       <button type="submit" class="btn btn-danger">
         Post Bug
       </button>
